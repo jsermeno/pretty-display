@@ -12,7 +12,7 @@ module Text.Display
   , dPrint
 
   -- * Re-exports
-  , ppShow
+  , Pretty.ppShow
   , pPrint
 
   -- * Types
@@ -25,7 +25,7 @@ import Data.Text (Text)
 import qualified Data.Text as Text
 import qualified Data.Text.IO as TextIO
 
-import Text.Show.Pretty as Pretty
+import qualified Text.Show.Pretty as Pretty
 
 newtype DisplayText = DisplayText { _fromDisplayText :: Text } deriving (Eq)
 
@@ -77,3 +77,7 @@ dShow a = unDisplayText (display a)
 -- | Print 'Display' instance.
 dPrint :: Display a => a -> IO ()
 dPrint a = TextIO.putStrLn (dShow a)
+
+-- | Pretty print 'Show' instance.
+pPrint :: Show a => a -> IO ()
+pPrint a = putStrLn (Pretty.ppShow a)
