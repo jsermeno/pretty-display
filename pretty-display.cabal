@@ -1,7 +1,8 @@
 name:                pretty-display
 version:             0.1.2
 synopsis:            Typeclass for human-readable display
-description:         Provides a typeclass and tools for working interactively within ghci.
+description:         Typeclass for human-readable display. Provides tools for
+                     working interactively within ghci.
 homepage:            https://github.com/githubuser/pretty-display
 license:             BSD3
 license-file:        LICENSE
