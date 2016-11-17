@@ -1,5 +1,5 @@
 name:                pretty-display
-version:             0.1.3
+version:             0.1.4
 synopsis:            Typeclass for human-readable display
 description:         Typeclass for human-readable display. Provides tools for
                      working interactively within ghci.
@@ -11,7 +11,7 @@ maintainer:          Justin Sermeno
 copyright:           Copyright (c) 2014-2016 Justin Sermeno
 category:            Text
 build-type:          Simple
-extra-source-files:  README.md
+extra-source-files:  README-h.md
 cabal-version:       >=1.10
 
 library
