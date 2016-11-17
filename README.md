@@ -1,5 +1,6 @@
 # pretty-display: typeclass for human-readable display
 
+[![Build Status](https://travis-ci.org/jsermeno/pretty-display.svg?branch=master)](https://travis-ci.org/jsermeno/pretty-display)
 [![Haskell Programming Language](https://img.shields.io/badge/language-Haskell-blue.svg)](Haskell.org)
 [![BSD3 License](http://img.shields.io/badge/license-BSD3-brightgreen.svg)](tl;dr Legal: BSD3)
 
