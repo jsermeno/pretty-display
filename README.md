@@ -1,6 +1,6 @@
 # pretty-display: typeclass for human-readable display
 
-In Haskell the `Show` typeclass displays the structure of a value as valid haskell code. However, there are times when you want to provide a richer display for a value while still retaining the benefits of derived `Show` instances. This can be especially useful when working interactively in ghci. `pretty-display` provides the `Display` typeclass for just this purpose.
+In Haskell the `Show` typeclass displays the structure of a value as valid haskell code. However, there are times when you want to provide a richer display for a value while still retaining the benefits of having derived `Show` instances. This can be especially useful when working interactively in ghci. `pretty-display` provides a tiny registered package with the `Display` typeclass for just this purpose.
 
 # GHCi usage
 
