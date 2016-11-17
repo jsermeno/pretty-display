@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/jsermeno/pretty-display.svg?branch=master)](https://travis-ci.org/jsermeno/pretty-display)
 [![Haskell Programming Language](https://img.shields.io/badge/language-Haskell-blue.svg)](Haskell.org)
-[![BSD3 License](http://img.shields.io/badge/license-BSD3-brightgreen.svg)](tl;dr Legal: BSD3)
+![BSD3 License](http://img.shields.io/badge/license-BSD3-brightgreen.svg)
 
 In Haskell the `Show` typeclass is used to display a syntactically correct Haskell expression. However, there are times when you want to provide a richer display for a value while still retaining the benefits of having derived `Show` instances. This can be especially useful when working interactively in ghci. `pretty-display` provides a tiny registered package with the `Display` typeclass for just this purpose.
 
@@ -18,7 +18,7 @@ import Text.Display
 :def npp (\_ -> return ":set -interactive-print=print")
 ```
 
-<img src="https://cloud.githubusercontent.com/assets/197051/20393285/4d04a098-aca9-11e6-85ea-a025c5e752f1.png" alt="ghci example" width="638" height="213">
+![GHCi Example](https://cloud.githubusercontent.com/assets/197051/20393285/4d04a098-aca9-11e6-85ea-a025c5e752f1.png =638x213)
 
 ## Typeclass usage
 
