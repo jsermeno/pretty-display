@@ -2,7 +2,7 @@
 
 In Haskell the `Show` typeclass displays the structure of a value as valid haskell code. However, there are times when you want to provide a richer display for a value while still retaining the benefits of having derived `Show` instances. This can be especially useful when working interactively in ghci. `pretty-display` provides a tiny registered package with the `Display` typeclass for just this purpose.
 
-# GHCi usage
+## GHCi usage
 
 To use `Display` instances as the default in ghci create a `.ghci` file with the following:
 
@@ -51,3 +51,7 @@ main = do
   dPrint record
   pPrint record
 ```
+
+## Using `Show` when defaulting to `Display`
+
+If you've set ghci to use `dPrint` by default you can still print `Show` instances for debugging. For normal printing use `print`. For convenience `pretty-display` re-exports `pPrint` from the `pretty-show` package for pretty printing `Show` instances.
