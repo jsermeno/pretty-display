@@ -1,16 +1,15 @@
 name:                pretty-display
-version:             0.1.0
-synopsis:            Initial project template from stack
-description:         Please see README.md
-homepage:            https://github.com/githubuser/pretty-display#readme
+version:             0.1.1
+synopsis:            Typeclass for human-readable display
+description:         Provides a typeclass and tools for working interactively within ghci.
+homepage:            https://github.com/githubuser/pretty-display
 license:             BSD3
 license-file:        LICENSE
-author:              Author name here
-maintainer:          example@example.com
-copyright:           2016 Author name here
-category:            Web
+author:              Justin Sermeno
+maintainer:          Justin Sermeno
+copyright:           Copyright (c) 2014-2016 Justin Sermeno
+category:            Text
 build-type:          Simple
--- extra-source-files:
 cabal-version:       >=1.10
 
 library
