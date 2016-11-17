@@ -17,7 +17,7 @@ record = MyRecord
   }
 
 instance {-# OVERLAPPING #-} Display MyRecord where
-  display a = mkDisplayTextFromStr
+  display a = mkDisplayTextStr
       $ show
       $ toCol "MyRecord (percentage): " <> toCol (displayPerc a)
     where

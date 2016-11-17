@@ -2,8 +2,13 @@
 {-# LANGUAGE UndecidableInstances #-}
 module Text.Display
   ( mkDisplayText
-  , mkDisplayTextFromStr
   , unDisplayText
+  , mkDt
+  , unDt
+  , mkDisplayTextStr
+  , unDisplayTextStr
+  , mkDtStr
+  , unDtStr
   , dPrint
 
   -- * Re-exports
@@ -33,17 +38,42 @@ class Display a where
 instance {-# Overlappable #-} (Show a) => Display a where
   display a = (DisplayText . Text.pack . Pretty.ppShow) a
 
+-- | Wrap 'Text' into a 'DisplayText'.
 mkDisplayText :: Text -> DisplayText
 mkDisplayText a = DisplayText a
 
+-- | Alias for 'mkDt'
+mkDt :: Text -> DisplayText
+mkDt = mkDisplayText
+
+-- | Unwrap 'DisplayText' to a 'Text'.
 unDisplayText :: DisplayText -> Text
 unDisplayText a = _fromDisplayText a
 
-mkDisplayTextFromStr :: String -> DisplayText
-mkDisplayTextFromStr a = mkDisplayText (Text.pack a)
+-- | Alias for 'unDisplayText'
+unDt :: DisplayText -> Text
+unDt = unDisplayText
 
+-- | Wrap 'String' into a 'DisplayText'.
+mkDisplayTextStr :: String -> DisplayText
+mkDisplayTextStr a = mkDisplayText (Text.pack a)
+
+-- | Alias for 'mkDisplayTextStr'
+mkDtStr :: String -> DisplayText
+mkDtStr = mkDisplayTextStr
+
+-- | Unwrap 'DisplayText' to a 'String'.
+unDisplayTextStr :: DisplayText -> String
+unDisplayTextStr a = Text.unpack (unDisplayText a)
+
+-- | Alias for 'unDisplayTextStr'
+unDtStr :: DisplayText -> String
+unDtStr = unDisplayTextStr
+
+-- | Convert 'Display' instance into 'Text'.
 dShow :: Display a => a -> Text
 dShow a = unDisplayText (display a)
 
+-- | Print 'Display' instance.
 dPrint :: Display a => a -> IO ()
 dPrint a = TextIO.putStrLn (dShow a)
