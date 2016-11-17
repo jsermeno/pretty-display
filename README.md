@@ -18,7 +18,7 @@ import Text.Display
 :def npp (\_ -> return ":set -interactive-print=print")
 ```
 
-![GHCi Example](https://cloud.githubusercontent.com/assets/197051/20393285/4d04a098-aca9-11e6-85ea-a025c5e752f1.png)
+<img src="https://cloud.githubusercontent.com/assets/197051/20393285/4d04a098-aca9-11e6-85ea-a025c5e752f1.png" alt="ghci example" width="638" height="213" />
 
 ## Typeclass usage
 
