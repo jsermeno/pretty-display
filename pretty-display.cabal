@@ -16,7 +16,8 @@ description:         <<https://travis-ci.org/jsermeno/pretty-display.svg?branch=
                      .
                      <<https://cloud.githubusercontent.com/assets/197051/20434593/74a2b66c-ad76-11e6-9eef-cff6352d08b1.png>>
                      .
-                     For examples visit the <https://github.com/githubuser/pretty-display#readme README>
+                     For examples visit the
+                     <https://github.com/githubuser/pretty-display#readme README>
 
 homepage:            https://github.com/githubuser/pretty-display#readme
 license:             BSD3
