@@ -1,3 +1,4 @@
+{-# LANGUAGE CPP #-}
 module Main where
 
 import Numeric
@@ -16,7 +17,11 @@ record = MyRecord
   , denominator = 1326
   }
 
-instance {-# OVERLAPPING #-} Display MyRecord where
+instance
+#if __GLASGOW_HASKELL >= 710
+  {-# OVERLAPPING #-}
+#endif
+  Display MyRecord where
   display a = mkDisplayTextStr
       $ show
       $ toCol "MyRecord (percentage): " <> toCol (displayPerc a)

@@ -4,8 +4,26 @@
 #if __GLASGOW_HASKELL__ < 710
 {-# LANGUAGE OverlappingInstances #-}
 #endif
+--------------------------------------------------------------------------------
+-- |
+-- Module     : Text.Display
+-- Copyright  : (C) 2016 Justin Sermeno
+-- License    : BSD3
+-- Maintainer : Justin Sermeno
+--
+-- An instance @Display@ is similar to an instance of @Show@. The difference is that -- @Show@ is meant to return well-formed haskell expressions and a complementary
+-- @Read@ instance should be possible. @Display@ is meant for human-readable output.
+-- For instance, you could have a complex data structure output a chart by default
+-- in GHCi, while still being able to derive an instance of @Show@ to inspect the
+-- data structure when needed.
+--------------------------------------------------------------------------------
 module Text.Display
-  ( mkDisplayText
+  ( -- * Types
+    Display(..)
+  , DisplayText
+
+  -- * Converting to the 'DisplayText' type
+  , mkDisplayText
   , unDisplayText
   , mkDt
   , unDt
@@ -13,15 +31,13 @@ module Text.Display
   , unDisplayTextStr
   , mkDtStr
   , unDtStr
+
+  -- * Rendering the 'Display' class
   , dPrint
 
   -- * Re-exports
   , Pretty.ppShow
   , pPrint
-
-  -- * Types
-  , Display(..)
-  , DisplayText
   )
   where
 
@@ -39,7 +55,11 @@ instance Show DisplayText where
 class Display a where
   display :: a -> DisplayText
 
-instance {-# Overlappable #-} (Show a) => Display a where
+instance
+#if __GLASGOW_HASKELL__ >= 710
+  {-# Overlappable #-}
+#endif
+  (Show a) => Display a where
   display a = (DisplayText . Text.pack . Pretty.ppShow) a
 
 -- | Wrap 'Text' into a 'DisplayText'.
