@@ -33,6 +33,7 @@ module Text.Display
   , unDtStr
 
   -- * Rendering the 'Display' class
+  , dShow
   , dPrint
 
   -- * Re-exports
