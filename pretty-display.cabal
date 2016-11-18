@@ -1,5 +1,5 @@
 name:                pretty-display
-version:             0.1.7
+version:             0.1.8
 synopsis:            Typeclass for human-readable display
 description:         Typeclass for human-readable display. Provides tools for
                      working interactively within ghci.
