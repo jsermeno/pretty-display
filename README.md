@@ -10,7 +10,7 @@ In Haskell the `Show` typeclass is used to display a syntactically correct Haske
 
 To use `Display` instances as the default in ghci create a `.ghci` file with the following:
 
-```
+```haskell
 import Text.Display
 
 :set -interactive-print=Text.Display.dPrint
@@ -24,7 +24,7 @@ import Text.Display
 
 By default, all instances of `Show` are also instances of `Display`. To create a custom instance you will need to use the `OVERLAPPING` pragma, and define the `display` method of type `a -> DisplayText`. For example:
 
-```
+```haskell
 import Numeric
 
 import Text.Display
