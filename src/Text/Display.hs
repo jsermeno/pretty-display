@@ -97,7 +97,7 @@ unDtStr = unDisplayTextStr
 
 -- | Convert 'Display' instance into 'Text'.
 dShow :: Display a => a -> Text
-dShow a = unDisplayText (display a)
+dShow a = Text.pack $ Pretty.ppShow $ display a
 
 -- | Print 'Display' instance.
 dPrint :: Display a => a -> IO ()

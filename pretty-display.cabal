@@ -1,5 +1,5 @@
 name:                pretty-display
-version:             0.1.9
+version:             0.1.10
 synopsis:            Typeclass for human-readable display
 description:         <<https://travis-ci.org/jsermeno/pretty-display.svg?branch=master>>
                      <<https://img.shields.io/badge/language-Haskell-blue.svg>>
